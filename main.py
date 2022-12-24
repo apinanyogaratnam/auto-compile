@@ -1,6 +1,7 @@
 import os
 import sys
 
+
 def main() -> None:
     arguments = sys.argv[1:]
 
