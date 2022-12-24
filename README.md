@@ -13,13 +13,11 @@ A cli tool that executes a command when detected a file change.
 
 Download the cli tool
 
-1. Install python
-2. move the python file into the directory
-
 macos:
-```sh
-
-```
+1. download the binary: https://github.com/apinanyogaratnam/auto-compile/binaries/ac-macos
+2. move the binary to root directory: `mv ac-macos ~/ac`
+3. grant permissions: `chmod +x ac`
+4. set alias: `echo "alias ac='~/ac'" >> ~/.zshrc`
 
 Note: you may need to restart your terminal
 
@@ -28,7 +26,7 @@ Note: you may need to restart your terminal
 This will execute the `date` command when files ending with `.py`
 and clear the output
 ```sh
-python main.py .py date --clear
+ac .py date --clear
 ```
 
 ## Support
