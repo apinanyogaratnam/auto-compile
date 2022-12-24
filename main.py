@@ -55,6 +55,9 @@ def main() -> None:
                 print(f'detected change: {name}')
                 files[i] = file_content
 
+                if clear:
+                    os.system('clear')
+
 
 if __name__ == '__main__':
     main()
