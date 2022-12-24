@@ -14,10 +14,10 @@ A cli tool that executes a command when detected a file change.
 Download the cli tool
 
 macos:
-1. download the binary: https://github.com/apinanyogaratnam/auto-compile/binaries/ac-macos
-2. move the binary to root directory: `mv ac-macos ~/ac`
-3. grant permissions: `chmod +x ac`
-4. set alias: `echo "alias ac='~/ac'" >> ~/.zshrc`
+1. download the binary: https://github.com/apinanyogaratnam/auto-compile/binaries/auto-compile-macos
+2. move the binary to root directory: `mv auto-compile-macos ~/ac`
+3. grant permissions: `chmod +x auto-compile`
+4. set alias: `echo "alias auto-compile='~/auto-compile'" >> ~/.zshrc`
 
 Note: you may need to restart your terminal
 
@@ -26,7 +26,7 @@ Note: you may need to restart your terminal
 This will execute the `date` command when files ending with `.py`
 and clear the output
 ```sh
-ac .py date --clear
+auto-compile .py date --clear
 ```
 
 ## Support
