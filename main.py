@@ -10,7 +10,7 @@ def main() -> None:
 
     try:
         file_extension = arguments[0]
-    except Exception as error:
+    except IndexError as error:
         print('second argument must be a file extension')
         sys.exit(1)
 
@@ -20,7 +20,7 @@ def main() -> None:
 
     try:
         command = arguments[1]
-    except Exception as error:
+    except IndexError as error:
         print('third argument must be a command')
         sys.exit(1)
 
