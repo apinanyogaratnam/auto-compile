@@ -44,6 +44,7 @@ def main() -> None:
             files.append(file.read())
         print(f'monitoring dir: {name}')
 
+    # detecting file change
     while True:
         for i, name in enumerate(filelist):
             with open(name) as file:
