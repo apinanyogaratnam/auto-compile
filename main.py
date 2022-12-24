@@ -1,7 +1,7 @@
 import sys
 
 def main() -> None:
-    arguments = sys.argv
+    arguments = sys.argv[1:]
     print(arguments)
 
 if __name__ == '__main__':
