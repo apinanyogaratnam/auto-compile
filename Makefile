@@ -1,2 +1,2 @@
 start:
- 	python main.py .py date --clear
+	python main.py .py date --clear
