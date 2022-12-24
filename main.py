@@ -6,6 +6,7 @@ def main() -> None:
 
     directory = None
     file_extension = None
+    command = None
     clear = '--clear' in arguments or '-c' in arguments
     try:
         directory = arguments[0]
@@ -25,6 +26,16 @@ def main() -> None:
 
     if not file_extension:
         print('no file extension specified')
+        sys.exit(1)
+
+    try:
+        command = arguments[2]
+    except Exception as error:
+        print('third argument must be a command')
+        sys.exit(1)
+
+    if not command:
+        print('third argument must be a command')
         sys.exit(1)
 
     path = os.path.abspath(os.getcwd())
@@ -56,6 +67,7 @@ def main() -> None:
                     os.system('clear')
 
                 print(f'detected change: {name}')
+                os.system(command)
                 files[i] = file_content
 
 
