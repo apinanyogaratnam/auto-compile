@@ -47,10 +47,12 @@ def main() -> None:
     while True:
         for i, name in enumerate(filelist):
             with open(name) as file:
-                if files[i] == file.read():
+                file_content = file.read()
+                if files[i] == file_content:
                     continue
 
                 print(f'detected change: {name}')
+                files[i] = file_content
 
 
 if __name__ == '__main__':
