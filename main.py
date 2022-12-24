@@ -52,11 +52,11 @@ def main() -> None:
                 if files[i] == file_content:
                     continue
 
-                print(f'detected change: {name}')
-                files[i] = file_content
-
                 if clear:
                     os.system('clear')
+
+                print(f'detected change: {name}')
+                files[i] = file_content
 
 
 if __name__ == '__main__':
