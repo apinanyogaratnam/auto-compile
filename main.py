@@ -4,22 +4,12 @@ import sys
 def main() -> None:
     arguments = sys.argv[1:]
 
-    directory = None
     file_extension = None
     command = None
     clear = '--clear' in arguments or '-c' in arguments
-    try:
-        directory = arguments[0]
-    except Exception as error:
-        print('first argument must be a directory')
-        sys.exit(1)
-
-    if not directory:
-        print('no directory specified')
-        sys.exit(1)
 
     try:
-        file_extension = arguments[1]
+        file_extension = arguments[0]
     except Exception as error:
         print('second argument must be a file extension')
         sys.exit(1)
@@ -29,7 +19,7 @@ def main() -> None:
         sys.exit(1)
 
     try:
-        command = arguments[2]
+        command = arguments[1]
     except Exception as error:
         print('third argument must be a command')
         sys.exit(1)
